@@ -19,7 +19,7 @@
 
 <h1>Results</h1>
 
-<h2>Elemental Axes: <span class="weight-300" id="economic-label"></span></h2>
+<h2>Elemental Axes: <span class="weight-300" id="element-label"></span></h2>
 <div class="axis">
     <img id="img-earth" src="value_images/earth.png" height="128pt"/>
     <div class="bar earth" id="bar-earth"><div class="text-wrapper" id="earth"></div></div>
@@ -31,6 +31,20 @@
     <div class="bar fire" id="bar-fire"><div class="text-wrapper" id="fire"></div></div>
     <div class="bar water" id="bar-water"><div class="text-wrapper" id="water"></div></div>
     <img id="img-water" src="value_images/water.png" height="128pt"/>
+</div>
+<h2>Community Axis: <span class="weight-300" id="community-label"></span></h2>
+<div class="axis">
+    <img id="img-community" src="value_images/community.svg" height="128pt"/>
+    <div class="bar community" id="bar-community"><div class="text-wrapper" id="community"></div></div>
+    <div class="bar individual" id="bar-individual"><div class="text-wrapper" id="individual"></div></div>
+    <img id="img-individual" src="value_images/individual.svg" height="128pt"/>
+</div>
+<h2>Diplomacy Axis: <span class="weight-300" id="diplomacy-label"></span></h2>
+<div class="axis">
+    <img id="img-might" src="value_images/might.svg" height="128pt"/>
+    <div class="bar might" id="bar-might"><div class="text-wrapper" id="might"></div></div>
+    <div class="bar peace" id="bar-peace"><div class="text-wrapper" id="peace"></div></div>
+    <img id="img-peace" src="value_images/peace.svg" height="128pt"/>
 </div>
 <h2>Spiritual Axis: <span class="weight-300" id="state-label"></span></h2>
 <div class="axis">
@@ -74,7 +88,6 @@ stats"></a></div></noscript>
            var query = window.location.search.substring(1)
            var vars = query.split("&")
            for (var i=0;i<vars.length;i++) {
-                   console.log(vars[i]);
                    var pair = vars[i].split("=")
                    if(pair[0] == variable) {return pair[1]}
            }
@@ -91,6 +104,7 @@ stats"></a></div></noscript>
         }
     }
 
+    elemArray = ["Earth", "Fire", "Air", "Water", "Neutral"]
     econArray = ["Communist","Socialist","Social","Centrist","Market","Capitalist","Laissez-Faire"]
     diplArray = ["Cosmopolitan","Internationalist","Peaceful","Balanced","Patriotic","Nationalist","Chauvinist"]
     govtArray = ["Anarchist","Libertarian","Liberal","Moderate","Statist","Authoritarian","Totalitarian"]
@@ -108,27 +122,38 @@ stats"></a></div></noscript>
         	{return ""}
     }
 
-    earth        = getQueryVariable("e")
-    fire         = getQueryVariable("f")
-    // TODO multiply
-    spirituality = getQueryVariable("s")
-    change       = getQueryVariable("c")
-    air          = (100 - earth       ).toFixed(1)
-    water        = (100 - fire        ).toFixed(1)
+    community    = getQueryVariable("c")
+    might        = getQueryVariable("s")
+    spirituality = getQueryVariable("e")
+    tradition    = getQueryVariable("t")
+    individual   = (100 - community   ).toFixed(1)
+    peace        = (100 - might       ).toFixed(1)
     material     = (100 - spirituality).toFixed(1)
-    tradition    = (100 - change      ).toFixed(1)
+    change       = (100 - tradition   ).toFixed(1)
+
+    // TODO multiply
+    earth = 50
+    fire  = 50
+    air   = (100 - earth).toFixed(1)
+    water = (100 - fire ).toFixed(1)
 
     setBarValue("earth", earth)
     setBarValue("air", air)
     setBarValue("water", water)
     setBarValue("fire", fire)
+    setBarValue("community", community)
+    setBarValue("individual", individual)
+    setBarValue("might", might)
+    setBarValue("peace", peace)
     setBarValue("spirituality", spirituality)
     setBarValue("material", material)
     setBarValue("change", change)
     setBarValue("tradition", tradition)
 
-    document.getElementById("economic-label").innerHTML = setLabel(earth, econArray)
-    //document.getElementById("diplomatic-label").innerHTML = setLabel(water, diplArray)
+    document.getElementById("element-label").innerHTML = setLabel(0, elemArray)
+
+    document.getElementById("community-label").innerHTML = setLabel(community, econArray)
+    document.getElementById("diplomacy-label").innerHTML = setLabel(peace, diplArray)
     document.getElementById("state-label").innerHTML = setLabel(spirituality, govtArray)
     document.getElementById("society-label").innerHTML = setLabel(change, sctyArray)
 
@@ -136,7 +161,7 @@ stats"></a></div></noscript>
     ideodist = Infinity
     for (var i = 0; i < ideologies.length; i++) {
         dist = 0
-        dist += Math.pow(Math.abs(ideologies[i].stats.econ - earth), 2)
+        dist += Math.pow(Math.abs(ideologies[i].stats.econ - community), 2)
         dist += Math.pow(Math.abs(ideologies[i].stats.govt - spirituality), 2)
         dist += Math.pow(Math.abs(ideologies[i].stats.dipl - water), 1.73856063)
         dist += Math.pow(Math.abs(ideologies[i].stats.scty - change), 1.73856063)
@@ -187,7 +212,6 @@ stats"></a></div></noscript>
         ctx.fillRect(120, 540, 560, 80)
         ctx.fillStyle="#6e6d2d"
         ctx.fillRect(120, 184, 5.6*earth-2, 72)
-        console.log(earth);
         ctx.fillStyle="#f9d672"
         ctx.fillRect(682-5.6*air, 184, 5.6*air-2, 72)
         ctx.fillStyle="#d46627"
@@ -224,8 +248,8 @@ stats"></a></div></noscript>
         ctx.fillText("8values.github.io", 780, 60)
 		ctx.fillText(version, 780, 90)
         ctx.textAlign="center"
-        ctx.fillText("Elemental Axes: " + document.getElementById("economic-label").innerHTML, 400, 175)
-        ctx.fillText("Spiritual Axis: " + document.getElementById("state-label").innerHTML, 400, 415)
+        ctx.fillText("Elemental Axes: " + document.getElementById("element-label").innerHTML, 400, 175)
+        ctx.fillText("Spiritual Axis: " + document.getElementById("spirit-label").innerHTML, 400, 415)
         ctx.fillText("Societal Axis: " + document.getElementById("society-label").innerHTML, 400, 535)
 
         document.getElementById("banner").src = c.toDataURL();

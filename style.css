@@ -166,16 +166,6 @@ div.air {
     text-align: right;
     border-left-style: solid;
 }
-div.spirituality {
-    background-color: #9c27b0;
-    text-align: left;
-    border-right-style: solid;
-}
-div.material {
-    background-color: #00897b;
-    text-align: right;
-    border-left-style: solid;
-}
 div.water {
     background-color: #81d3e8;
     text-align: right;
@@ -186,13 +176,43 @@ div.fire {
     text-align: left;
     border-right-style: solid;
 }
+div.community {
+    background-color: #3f51b5;
+    text-align: left;
+    border-right-style: solid;
+}
+div.individual {
+    background-color: #ffeb3b;
+    text-align: right;
+    border-left-style: solid;
+}
+div.might {
+    background-color: #f44336;
+    text-align: left;
+    border-right-style: solid;
+}
+div.peace {
+    background-color: #03a9f4;
+    text-align: right;
+    border-left-style: solid;
+}
+div.spirituality {
+    background-color: #9c27b0;
+    text-align: left;
+    border-right-style: solid;
+}
+div.material {
+    background-color: #00897b;
+    text-align: right;
+    border-left-style: solid;
+}
 div.change {
     background-color: #03a9f4;
     text-align: right;
     border-left-style: solid;
 }
 div.tradition {
-    background-color: #ff9800;
+    background-color: #8bc34a;
     text-align: left;
     border-right-style: solid;
 }

@@ -48,19 +48,20 @@ stats"></a></div></noscript>
 
 <!-- JavaScript for the test itself -->
 <script>
-    var max_econ, max_dipl, max_govt, max_scty; // Max possible scores
-    max_econ = max_dipl = max_govt = max_scty = 0;
-    let econ_array = new Array(questions.length);
-    let dipl_array = new Array(questions.length);
-    let govt_array = new Array(questions.length);
-    let scty_array = new Array(questions.length);
+    var max_comm, max_strn, max_sprt, max_trad; // Max possible scores
+    max_comm = max_strn = max_sprt = max_trad = 0;
+    let comm_array = new Array(questions.length);
+    let strn_array = new Array(questions.length);
+    let sprt_array = new Array(questions.length);
+    let trad_array = new Array(questions.length);
     var qn = 0; // Question number
+    var rStr = ""; // Response string, for debugging
     init_question();
     for (var i = 0; i < questions.length; i++) {
-        max_econ += Math.abs(questions[i].effect.econ)
-        max_dipl += Math.abs(questions[i].effect.dipl)
-        max_govt += Math.abs(questions[i].effect.govt)
-        max_scty += Math.abs(questions[i].effect.scty)
+        max_comm += Math.abs(questions[i].effect.comm)
+        max_strn += Math.abs(questions[i].effect.strn)
+        max_sprt += Math.abs(questions[i].effect.sprt)
+        max_trad += Math.abs(questions[i].effect.trad)
     }
     function init_question() {
         document.getElementById("question-text").innerHTML = questions[qn].question;
@@ -76,10 +77,10 @@ stats"></a></div></noscript>
     }
 
     function next_question(mult) {
-        econ_array[qn] = mult*questions[qn].effect.econ
-        dipl_array[qn] = mult*questions[qn].effect.dipl
-        govt_array[qn] = mult*questions[qn].effect.govt
-        scty_array[qn] = mult*questions[qn].effect.scty
+        comm_array[qn] = mult*questions[qn].effect.comm
+        strn_array[qn] = mult*questions[qn].effect.strn
+        sprt_array[qn] = mult*questions[qn].effect.sprt
+        trad_array[qn] = mult*questions[qn].effect.trad
         qn++;
         if (qn < questions.length) {
             init_question();
@@ -96,20 +97,45 @@ stats"></a></div></noscript>
         init_question();
     }
 
+    function answer(response) {
+        if (response == "Y")
+            next_question( 1.0);
+        else if (response == "y")
+            next_question( 0.5);
+        else if (response == "N")
+            next_question(-1.0);
+        else if (response == "n")
+            next_question(-0.5);
+        else
+            next_question( 0.0);
+    }
+    function parseAnswers(respString) {
+        if (respString.length < questions.length) {
+            console.log("Warning: not enough responses")
+            return
+        }
+        if (respString.length > questions.length) {
+            console.log("Warning: not enough responses")
+            return
+        }
+        while (qn < questions.length)
+            answer(respString[qn])
+    }
+
     function calc_score(score,max) {
         return (100*(max+score)/(2*max)).toFixed(1)
     }
 
     function results() {
-        let final_econ = econ_array.reduce((a, b) => a + b, 0)
-        let final_dipl = dipl_array.reduce((a, b) => a + b, 0)
-        let final_govt = govt_array.reduce((a, b) => a + b, 0)
-        let final_scty = scty_array.reduce((a, b) => a + b, 0)
+        let final_comm = comm_array.reduce((a, b) => a + b, 0)
+        let final_strn = strn_array.reduce((a, b) => a + b, 0)
+        let final_sprt = sprt_array.reduce((a, b) => a + b, 0)
+        let final_trad = trad_array.reduce((a, b) => a + b, 0)
         location.href = `results.html`
-            + `?e=${calc_score(final_econ,max_econ)}`
-            + `&f=${calc_score(final_dipl,max_dipl)}`
-            + `&s=${calc_score(final_govt,max_govt)}`
-            + `&c=${calc_score(final_scty,max_scty)}`
+            + `?c=${calc_score(final_comm,max_comm)}`
+            + `&s=${calc_score(final_strn,max_strn)}`
+            + `&e=${calc_score(final_sprt,max_sprt)}`
+            + `&t=${calc_score(final_trad,max_trad)}`
     }
 </script>
 </body>
