@@ -48,7 +48,7 @@ questions = [
         "question": "It is important to be a positive influence on your community.",
         "effect": {
             "comm": 10,
-            "strn": 0,
+            "strn": -5,
             "sprt": 0,
             "trad": 0
         }
@@ -198,21 +198,30 @@ questions = [
         }
     },
     {
+        "question": "All authority should be questioned.",
+        "effect": {
+            "comm": -10,
+            "strn": 0,
+            "sprt": 0,
+            "trad": -5
+        }
+    },
+    {
         "question": "It is better to pursue a happy life than to pursue power.",
         "effect": {
-            "comm": -5,
+            "comm": 0,
             "strn": -10,
             "sprt": 5,
             "trad": 0
         }
     },
     {
-        "question": "All authority should be questioned.",
+        "question": "The key to success is to be at peace with yourself.",
         "effect": {
-            "comm": 10,
-            "strn": 0,
-            "sprt": 0,
-            "trad": -5
+            "comm": -10,
+            "strn": -5,
+            "sprt": 5,
+            "trad": 0
         }
     },
     {
@@ -239,7 +248,7 @@ questions = [
             "comm": 0,
             "strn": 0,
             "sprt": 0,
-            "trad": 10
+            "trad": -10
         }
     },
     {
@@ -257,7 +266,7 @@ questions = [
             "comm": 0,
             "strn": 0,
             "sprt": 0,
-            "trad": 10
+            "trad": -10
         }
     },
     {
@@ -265,8 +274,8 @@ questions = [
         "effect": {
             "comm": 0,
             "strn": 0,
-            "sprt": -10,
-            "trad": -10
+            "sprt": 10,
+            "trad": 10
         }
     },
     {
@@ -320,7 +329,7 @@ questions = [
             "comm": 0,
             "strn": 0,
             "sprt": 0,
-            "trad": 10
+            "trad": -10
         }
     },
     {
@@ -363,9 +372,9 @@ questions = [
         "question": "To chase progress at all costs is dangerous.",
         "effect": {
             "comm": 0,
-            "strn": 5,
+            "strn": -5,
             "sprt": 5,
-            "trad": 10
+            "trad": 5
         }
     },
     {
@@ -401,11 +410,11 @@ questions = [
             "comm": 0,
             "strn": -10,
             "sprt": 10,
-            "trad": -10
+            "trad": -5
         }
     },
     {
-        "question": "You don't need to be a bender to leave your mark on history",
+        "question": "You don't need to be a bender to leave your mark on history.",
         "effect": {
             "comm": 10,
             "strn": -10,

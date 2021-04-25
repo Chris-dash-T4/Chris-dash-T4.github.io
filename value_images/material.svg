@@ -50,8 +50,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.8284271"
-     inkscape:cx="115.13234"
-     inkscape:cy="110.64271"
+     inkscape:cx="41.397383"
+     inkscape:cy="107.41287"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -86,17 +86,50 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(249.80447,-91.409467)">
-    <g
-       stroke="none"
-       stroke-width="1"
-       fill="none"
-       fill-rule="evenodd"
-       id="g8"
-       transform="matrix(3.3072917,0,0,3.3072917,-263.03364,78.180301)">
-      <path
-         d="M 19.666667,4 C 19.850762,4 20,4.1492384 20,4.3333333 V 19.666667 C 20,19.850762 19.850762,20 19.666667,20 H 4.3333333 C 4.1492384,20 4,19.850762 4,19.666667 V 4.3333333 C 4,4.1492384 4.1492384,4 4.3333333,4 Z M 18,6 H 6 v 8.792667 l 3.4166263,-3.416541 3.1666667,3.166667 1.810701,-1.81056 0.148799,0.148893 L 18,16.3015 Z m -3,1 c 1.104569,0 2,0.8954305 2,2 0,1.10457 -0.895431,2 -2,2 -1.104569,0 -2,-0.89543 -2,-2 0,-1.1045695 0.895431,-2 2,-2 z m 0,1 c -0.552285,0 -1,0.4477153 -1,1 0,0.5522848 0.447715,1 1,1 0.552285,0 1,-0.4477152 1,-1 0,-0.5522847 -0.447715,-1 -1,-1 z"
-         fill="#000000"
-         id="path6" />
-    </g>
+    <rect
+       ry="3.96875"
+       rx="3.96875"
+       style="fill:#222222;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.909449;paint-order:normal"
+       id="rect5252-2"
+       width="52.916668"
+       height="52.916668"
+       x="-249.80447"
+       y="91.40947" />
+    <rect
+       ry="2.6458333"
+       rx="2.6458333"
+       y="94.055298"
+       x="-247.15863"
+       height="47.625"
+       width="47.625"
+       id="rect5254-7"
+       style="fill:#00897b;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.909449;paint-order:normal" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path5258-9"
+       d="m -248.34926,128.45114 v 8.33437 c 0,3.07817 2.47809,5.55625 5.55625,5.55625 h 38.89375 c 3.07816,0 5.55625,-2.47808 5.55625,-5.55625 v -8.33437 z"
+       style="fill:#222222;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.909449;paint-order:normal" />
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.132292"
+       x="-223.4339"
+       y="138.51633"
+       id="text2149"><tspan
+         sodipodi:role="line"
+         id="tspan2147"
+         x="-223.4339"
+         y="138.51633"
+         style="fill:#ffffff;stroke-width:0.132292">MATERIAL</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:38.1px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.264583"
+       x="-224.26688"
+       y="125.73749"
+       id="text4975"><tspan
+         sodipodi:role="line"
+         id="tspan4973"
+         x="-224.26688"
+         y="125.73749"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.1px;font-family:FangSong;-inkscape-font-specification:FangSong;fill:#222222;fill-opacity:1;stroke-width:0.264583">元</tspan></text>
   </g>
 </svg>

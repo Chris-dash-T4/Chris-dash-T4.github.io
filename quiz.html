@@ -81,6 +81,16 @@ stats"></a></div></noscript>
         strn_array[qn] = mult*questions[qn].effect.strn
         sprt_array[qn] = mult*questions[qn].effect.sprt
         trad_array[qn] = mult*questions[qn].effect.trad
+        if (Math.abs(mult) < 0.1)
+            rStr += "0"
+        else if (mult >  0.9)
+            rStr += "Y"
+        else if (mult < -0.9)
+            rStr += "N"
+        else if (mult > 0)
+            rStr += "y"
+        else if (mult < 0)
+            rStr += "n"
         qn++;
         if (qn < questions.length) {
             init_question();
@@ -136,6 +146,7 @@ stats"></a></div></noscript>
             + `&s=${calc_score(final_strn,max_strn)}`
             + `&e=${calc_score(final_sprt,max_sprt)}`
             + `&t=${calc_score(final_trad,max_trad)}`
+            + `&rs=${rStr}`
     }
 </script>
 </body>
