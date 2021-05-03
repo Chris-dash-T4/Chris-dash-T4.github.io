@@ -206,7 +206,7 @@ stats"></a></div></noscript>
         c.width = 800;
         c.height = 700;
         ctx.fillStyle = "#EEEEEE"
-        ctx.fillRect(0,0,800,650);
+        ctx.fillRect(0,0,800,700);
 
         img = document.getElementById("img-community")
         ctx.drawImage(img, 20, 170, 100, 100);
@@ -257,13 +257,13 @@ stats"></a></div></noscript>
         ctx.fillText(elem, 20, 140)
 
         ctx.textAlign="left"
-        if (earth        > 30) {ctx.fillText(earth + "%", 130, 237.5)}
-        if (fire         > 30) {ctx.fillText(fire + "%", 130, 357.5)}
+        if (earth        > 30) {ctx.fillText(community + "%", 130, 237.5)}
+        if (fire         > 30) {ctx.fillText(might + "%", 130, 357.5)}
         if (spirituality > 30) {ctx.fillText(spirituality + "%", 130, 477.5)}
         if (tradition    > 30) {ctx.fillText(tradition + "%", 130, 597.5)}
         ctx.textAlign="right"
-        if (air          > 30) {ctx.fillText(air + "%", 670, 237.5)}
-        if (water        > 30) {ctx.fillText(water + "%", 670, 357.5)}
+        if (air          > 30) {ctx.fillText(individual + "%", 670, 237.5)}
+        if (water        > 30) {ctx.fillText(peace + "%", 670, 357.5)}
         if (material     > 30) {ctx.fillText(material + "%", 670, 477.5)}
         if (change       > 30) {ctx.fillText(change + "%", 670, 597.5)}
 
