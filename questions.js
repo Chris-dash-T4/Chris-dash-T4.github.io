@@ -18,7 +18,7 @@ questions = [
         }
     },
     {
-        "question": "History can be summarized as a class struggle, between benders and non-benders.",
+        "question": "History can be summarized as a series of conflicts between the haves and the have-nots.",
         "effect": {
             "comm": 5,
             "strn": 0,
@@ -288,7 +288,7 @@ questions = [
         }
     },
     {
-        "question": "Technology should be used to put non-benders on equal footing with benders.",
+        "question": "Technology should be used to make people more equal.",
         "effect": {
             "comm": 10,
             "strn": 0,
@@ -333,15 +333,6 @@ questions = [
         }
     },
     {
-        "question": "Same-sex marriage should be legal.",
-        "effect": {
-            "comm": 0,
-            "strn": -5,
-            "sprt": 10,
-            "trad": -5
-        }
-    },
-    {
         "question": "No cultures are superior to others.",
         "effect": {
             "comm": 5,
@@ -357,15 +348,6 @@ questions = [
             "strn": 10,
             "sprt": -5,
             "trad": 5
-        }
-    },
-    {
-        "question": "Benders are better off than non-benders.",
-        "effect": {
-            "comm": 5,
-            "strn": -5,
-            "sprt": 0,
-            "trad": -5
         }
     },
     {
@@ -414,12 +396,57 @@ questions = [
         }
     },
     {
-        "question": "You don't need to be a bender to leave your mark on history.",
+        "question": "Everyone should look out for their own needs.",
         "effect": {
-            "comm": 10,
-            "strn": -10,
-            "sprt": 5,
-            "trad": 0
+            "comm": -10,
+            "strn": 5,
+            "sprt": 0,
+            "trad": 5
+        }
+    },
+    {
+        "question": "Laws should not be based on religion.",
+        "effect": {
+            "comm": 0,
+            "strn": 0,
+            "sprt": -10,
+            "trad": -5
+        }
+    },
+    {
+        "question": "Technological progress has mostly been a force for good.",
+        "effect": {
+            "comm": 0,
+            "strn": 0,
+            "sprt": -5,
+            "trad": -10
+        }
+    },
+    {
+        "question": "People should be given freedom whenever it causes little security risk.",
+        "effect": {
+            "comm": -10,
+            "strn": -5,
+            "sprt": 0,
+            "trad": -5
+        }
+    },
+    {
+        "question": "My nation is closer to my views than most nations in the world.",
+        "effect": {
+            "comm": 5,
+            "strn": 10,
+            "sprt": 0,
+            "trad": 5
+        }
+    },
+    {
+        "question": "Tradition only hinders progress.",
+        "effect": {
+            "comm": 0,
+            "strn": -5,
+            "sprt": 0,
+            "trad": -10
         }
     }
 ];

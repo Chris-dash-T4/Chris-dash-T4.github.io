@@ -104,6 +104,7 @@ stats"></a></div></noscript>
             return;
         }
         qn--;
+        rStr = rStr.substring(0,rStr.length - 1);
         init_question();
     }
 
@@ -125,7 +126,7 @@ stats"></a></div></noscript>
             return
         }
         if (respString.length > questions.length) {
-            console.log("Warning: not enough responses")
+            console.log("Warning: too many responses")
             return
         }
         while (qn < questions.length)
