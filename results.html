@@ -131,11 +131,31 @@ stats"></a></div></noscript>
     material     = (100 - spirituality).toFixed(1)
     change       = (100 - tradition   ).toFixed(1)
 
+    c_e = 0.4 * (community - 50)
+    s_e = 0.4 * (might     - 50)
+    m_e = 0.1 * (material  - 50)
+    t_e = 0.1 * (tradition - 50)
+    c_f = -.4 * (community - 50)
+    s_f = .35 * (might     - 50)
+    m_f = .05 * (material  - 50)
+    t_f = 0.2 * (tradition - 50)
     // TODO multiply
-    earth = 50
-    fire  = 50
+    earth = (50 + c_e + s_e + m_e + t_e).toFixed(1)
+    fire  = (50 + c_f + s_f + m_f + t_f).toFixed(1)
     air   = (100 - earth).toFixed(1)
     water = (100 - fire ).toFixed(1)
+    m = Math.max(earth, fire, air, water);
+    e0 = "undefined"
+    if (m < 53)
+        e0 = "Neutral"
+    else if (m == earth)
+        e0 = "Earth"
+    else if (m == fire)
+        e0 = "Fire"
+    else if (m == air)
+        e0 = "Air"
+    else if (m == water)
+        e0 = "Water"
 
     setBarValue("earth", earth)
     setBarValue("air", air)
@@ -150,7 +170,7 @@ stats"></a></div></noscript>
     setBarValue("change", change)
     setBarValue("tradition", tradition)
 
-    document.getElementById("element-label").innerHTML = setLabel(0, elemArray)
+    document.getElementById("element-label").innerHTML = e0
 
     document.getElementById("community-label").innerHTML = setLabel(community, econArray)
     document.getElementById("diplomacy-label").innerHTML = setLabel(peace, diplArray)
