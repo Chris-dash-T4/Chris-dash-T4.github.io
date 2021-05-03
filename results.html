@@ -253,7 +253,7 @@ stats"></a></div></noscript>
         ctx.font="50px Montserrat"
         elem = document.getElementById("element-label").innerHTML
         img = document.getElementById("img-"+elem.toLowerCase())
-        ctx.drawImage(img, 660, 10, 120, 120)
+        ctx.drawImage(img, 660, 20, 120, 120)
         ctx.fillText(elem, 20, 140)
 
         ctx.textAlign="left"
@@ -270,7 +270,8 @@ stats"></a></div></noscript>
         ctx.font="300 30px Montserrat"
         ctx.textAlign="center"
         ctx.fillText("avatar.chris-t4.com", 400, 690)
-        ctx.fillText("Elemental Axes: " + document.getElementById("element-label").innerHTML, 400, 175)
+        ctx.fillText("Community Axis: " + document.getElementById("community-label").innerHTML, 400, 175)
+        ctx.fillText("Diplomacy Axis: " + document.getElementById("diplomacy-label").innerHTML, 400, 295)
         ctx.fillText("Spiritual Axis: " + document.getElementById("spirit-label").innerHTML, 400, 415)
         ctx.fillText("Societal Axis: " + document.getElementById("society-label").innerHTML, 400, 535)
 
