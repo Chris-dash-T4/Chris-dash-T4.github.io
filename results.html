@@ -6,7 +6,7 @@
 <link rel="shortcut icon" type="x-icon" href="icon.png">
 <meta charset="utf-8">
 <script>
-  version = "Test Edition #1" //Remember to update this before making changes to the test itself!
+  version = "" //Remember to update this before making changes to the test itself!
 </script>
 </head>
 <script type="application/javascript"
@@ -46,7 +46,7 @@
     <div class="bar peace" id="bar-peace"><div class="text-wrapper" id="peace"></div></div>
     <img id="img-peace" src="value_images/peace.svg" height="128pt"/>
 </div>
-<h2>Spiritual Axis: <span class="weight-300" id="state-label"></span></h2>
+<h2>Spiritual Axis: <span class="weight-300" id="spirit-label"></span></h2>
 <div class="axis">
     <img id="img-spirituality" src="value_images/spirituality.svg" height="128pt"/>
     <div class="bar spirituality" id="bar-spirituality"><div class="text-wrapper" id="spirituality"></div></div>
@@ -204,17 +204,17 @@ stats"></a></div></noscript>
         var c = document.createElement("canvas")
         var ctx = c.getContext("2d")
         c.width = 800;
-        c.height = 650;
+        c.height = 700;
         ctx.fillStyle = "#EEEEEE"
         ctx.fillRect(0,0,800,650);
 
-        img = document.getElementById("img-earth")
+        img = document.getElementById("img-community")
         ctx.drawImage(img, 20, 170, 100, 100);
-        img = document.getElementById("img-air")
+        img = document.getElementById("img-individual")
         ctx.drawImage(img, 680, 170, 100, 100)
-        img = document.getElementById("img-fire")
+        img = document.getElementById("img-might")
         ctx.drawImage(img, 20, 290, 100, 100)
-        img = document.getElementById("img-water")
+        img = document.getElementById("img-peace")
         ctx.drawImage(img, 680, 290, 100, 100)
         img = document.getElementById("img-spirituality")
         ctx.drawImage(img, 20, 410, 100, 100)
@@ -230,28 +230,31 @@ stats"></a></div></noscript>
         ctx.fillRect(120, 300, 560, 80)
         ctx.fillRect(120, 420, 560, 80)
         ctx.fillRect(120, 540, 560, 80)
-        ctx.fillStyle="#6e6d2d"
-        ctx.fillRect(120, 184, 5.6*earth-2, 72)
-        ctx.fillStyle="#f9d672"
-        ctx.fillRect(682-5.6*air, 184, 5.6*air-2, 72)
-        ctx.fillStyle="#d46627"
-        ctx.fillRect(120, 304, 5.6*fire-2, 72)
-        ctx.fillStyle="#81d3e8"
-        ctx.fillRect(682-5.6*water, 304, 5.6*water-2, 72)
-        ctx.fillStyle="#ffeb3b"
-        ctx.fillRect(120, 424, 5.6*spirituality-2, 72)
         ctx.fillStyle="#3f51b5"
+        ctx.fillRect(120, 184, 5.6*community-2, 72)
+        ctx.fillStyle="#ffeb3b"
+        ctx.fillRect(682-5.6*individual, 184, 5.6*individual-2, 72)
+        ctx.fillStyle="#f44336"
+        ctx.fillRect(120, 304, 5.6*might-2, 72)
+        ctx.fillStyle="#03a9f4"
+        ctx.fillRect(682-5.6*peace, 304, 5.6*peace-2, 72)
+        ctx.fillStyle="#9c27b0"
+        ctx.fillRect(120, 424, 5.6*spirituality-2, 72)
+        ctx.fillStyle="#00897b"
         ctx.fillRect(682-5.6*material, 424, 5.6*material-2, 72)
         ctx.fillStyle="#8bc34a"
         ctx.fillRect(120, 544, 5.6*tradition-2, 72)
-        ctx.fillStyle="#9c27b0"
+        ctx.fillStyle="#ea90ab"
         ctx.fillRect(682-5.6*change, 544, 5.6*change-2, 72)
         ctx.fillStyle="#222222"
         ctx.font="700 80px Montserrat"
         ctx.textAlign="left"
         ctx.fillText("8wisdoms", 20, 90)
         ctx.font="50px Montserrat"
-        ctx.fillText(ideology, 20, 140)
+        elem = document.getElementById("element-label").innerHTML
+        img = document.getElementById("img-"+elem.toLowerCase())
+        ctx.drawImage(img, 680, 10, 120, 120)
+        ctx.fillText(elem, 20, 140)
 
         ctx.textAlign="left"
         if (earth        > 30) {ctx.fillText(earth + "%", 130, 237.5)}
@@ -265,9 +268,8 @@ stats"></a></div></noscript>
         if (change       > 30) {ctx.fillText(change + "%", 670, 597.5)}
 
         ctx.font="300 30px Montserrat"
-        ctx.fillText("8wisdoms.github.io", 780, 60)
-		ctx.fillText(version, 780, 90)
         ctx.textAlign="center"
+        ctx.fillText("avatar.chris-t4.com", 400, 690)
         ctx.fillText("Elemental Axes: " + document.getElementById("element-label").innerHTML, 400, 175)
         ctx.fillText("Spiritual Axis: " + document.getElementById("spirit-label").innerHTML, 400, 415)
         ctx.fillText("Societal Axis: " + document.getElementById("society-label").innerHTML, 400, 535)
