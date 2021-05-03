@@ -137,7 +137,7 @@ questions = [
     {
         "question": "My nation is great.",
         "effect": {
-            "comm": 10,
+            "comm": 5,
             "strn": 10,
             "sprt": 0,
             "trad": 0
@@ -182,7 +182,7 @@ questions = [
     {
         "question": "The human world and the spirit world should remain separate.",
         "effect": {
-            "comm": 5,
+            "comm": 0,
             "strn": 0,
             "sprt": -10,
             "trad": 5
@@ -192,7 +192,7 @@ questions = [
         "question": "The sacrifice of some civil liberties is necessary to protect us from acts of terrorism.",
         "effect": {
             "comm": 10,
-            "strn": 0,
+            "strn": 5,
             "sprt": 0,
             "trad": 0
         }
@@ -218,8 +218,8 @@ questions = [
     {
         "question": "The key to success is to be at peace with yourself.",
         "effect": {
-            "comm": -10,
-            "strn": -5,
+            "comm": -5,
+            "strn": -10,
             "sprt": 5,
             "trad": 0
         }
@@ -344,7 +344,7 @@ questions = [
     {
         "question": "We should not accept migrants of a different element.",
         "effect": {
-            "comm": 0,
+            "comm": -5,
             "strn": 10,
             "sprt": -5,
             "trad": 5
@@ -362,7 +362,7 @@ questions = [
     {
         "question": "We should open our borders to immigration.",
         "effect": {
-            "comm": 0,
+            "comm": 5,
             "strn": -10,
             "sprt": 5,
             "trad": 0
@@ -389,7 +389,7 @@ questions = [
     {
         "question": "All people - regardless of factors like culture or sexuality - should be treated equally.",
         "effect": {
-            "comm": 0,
+            "comm": 5,
             "strn": -10,
             "sprt": 10,
             "trad": -5
