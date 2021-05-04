@@ -57,7 +57,7 @@ questions = [
         "question": "Governments only take away a person's natural freedoms.",
         "effect": {
             "comm": -10,
-            "strn": 0,
+            "strn": -5,
             "sprt": 0,
             "trad": -5
         }
@@ -65,8 +65,8 @@ questions = [
     {
         "question": "The United Republic should be abolished.",
         "effect": {
-            "comm": 0,
-            "strn": 10,
+            "comm": -5,
+            "strn": 5,
             "sprt": -5,
             "trad": 10
         }
@@ -93,7 +93,7 @@ questions = [
         "question": "The ends justify the means.",
         "effect": {
             "comm": 0,
-            "strn": -10,
+            "strn": 10,
             "sprt": -5,
             "trad": 0
         }
@@ -129,7 +129,7 @@ questions = [
         "question": "International aid is a waste of money.",
         "effect": {
             "comm": -10,
-            "strn": 10,
+            "strn": 5,
             "sprt": 0,
             "trad": 0
         }
@@ -201,7 +201,7 @@ questions = [
         "question": "All authority should be questioned.",
         "effect": {
             "comm": -10,
-            "strn": 0,
+            "strn": -5,
             "sprt": 0,
             "trad": -5
         }
@@ -218,8 +218,8 @@ questions = [
     {
         "question": "The key to success is to be at peace with yourself.",
         "effect": {
-            "comm": -5,
-            "strn": -10,
+            "comm": -10,
+            "strn": -5,
             "sprt": 5,
             "trad": 0
         }
@@ -344,7 +344,7 @@ questions = [
     {
         "question": "We should not accept migrants of a different element.",
         "effect": {
-            "comm": -5,
+            "comm": 0,
             "strn": 10,
             "sprt": -5,
             "trad": 5
@@ -390,7 +390,7 @@ questions = [
         "question": "All people - regardless of factors like culture or sexuality - should be treated equally.",
         "effect": {
             "comm": 5,
-            "strn": -10,
+            "strn": -5,
             "sprt": 10,
             "trad": -5
         }

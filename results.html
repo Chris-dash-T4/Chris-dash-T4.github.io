@@ -61,7 +61,7 @@
     <img id="img-change" src="value_images/change.svg" height="128pt"/>
 </div>
 <h2>Closest Match: <span class="weight-300" id="ideology-label"></span></h2>
-<p>Ideological matching is a work in change, and is much less accurate than the values and axes.</p>
+<p>Character matching is a work in progress, and is much less accurate than the values and axes.</p>
 <p>You can send these results by copying and pasting the URL at the top of the page or using the image below. Think your matched ideology was wrong? Want to help us calibrate the test? Send the results along with your political ideology to us at eightvalues@gmail.com, or send us any comments, questions, or criticism. </p>
 <hr/>
 <img src="" id="banner">
@@ -105,10 +105,10 @@ stats"></a></div></noscript>
     }
 
     elemArray = ["Earth", "Fire", "Air", "Water", "Neutral"]
-    econArray = ["Equalist","Community","Community","Centrist","Individual","Individual","Anarchist"]
-    diplArray = ["Cosmopolitan","Internationalist","Peaceful","Neutral","Patriotic","Nationalist","Chauvinist"]
-    govtArray = ["Esoteric","Extreme Spiritual","Spiritual","Balanced","Materialistic","Extreme Materialistic","Technologist"]
-    sctyArray = ["Revolutionary","Very Progressive","Progressive","Neutral","Traditional","Very Traditional","Reactionary"]
+    commArray = ["Equalist","Community","Community","Centrist","Individual","Individual","Anarchist"]
+    strnArray = ["Cosmopolitan","Internationalist","Peaceful","Neutral","Patriotic","Nationalist","Chauvinist"]
+    sprtArray = ["Esoteric","Extreme Spiritual","Spiritual","Balanced","Materialistic","Extreme Materialistic","Technologist"]
+    tradArray = ["Revolutionary","Very Progressive","Progressive","Neutral","Traditional","Very Traditional","Reactionary"]
 
     function setLabel(val,ary) {
         if (val > 100) { return "" } else
@@ -172,19 +172,19 @@ stats"></a></div></noscript>
 
     document.getElementById("element-label").innerHTML = e0
 
-    document.getElementById("community-label").innerHTML = setLabel(community, econArray)
-    document.getElementById("diplomacy-label").innerHTML = setLabel(peace, diplArray)
-    document.getElementById("spirit-label").innerHTML = setLabel(spirituality, govtArray)
-    document.getElementById("society-label").innerHTML = setLabel(change, sctyArray)
+    document.getElementById("community-label").innerHTML = setLabel(community, commArray)
+    document.getElementById("diplomacy-label").innerHTML = setLabel(peace, strnArray)
+    document.getElementById("spirit-label").innerHTML = setLabel(spirituality, sprtArray)
+    document.getElementById("society-label").innerHTML = setLabel(change, tradArray)
 
     ideology = ""
     ideodist = Infinity
     for (var i = 0; i < ideologies.length; i++) {
         dist = 0
-        dist += Math.pow(Math.abs(ideologies[i].stats.econ - community), 2)
-        dist += Math.pow(Math.abs(ideologies[i].stats.govt - spirituality), 2)
-        dist += Math.pow(Math.abs(ideologies[i].stats.dipl - water), 1.73856063)
-        dist += Math.pow(Math.abs(ideologies[i].stats.scty - change), 1.73856063)
+        dist += Math.pow(Math.abs(ideologies[i].stats.comm - community), 2)
+        dist += Math.pow(Math.abs(ideologies[i].stats.sprt - spirituality), 2)
+        dist += Math.pow(Math.abs(ideologies[i].stats.strn - might), 1.73856063)
+        dist += Math.pow(Math.abs(ideologies[i].stats.trad - tradition), 1.73856063)
         if (dist < ideodist) {
             ideology = ideologies[i].name
             ideodist = dist
