@@ -47,12 +47,39 @@ ideologies = [
         }
     },
     {
+        "name": "Lin Beifong",
+        "stats": {
+            "comm": 61,
+            "strn": 54,
+            "sprt": 45,
+            "trad": 39
+        }
+    },
+    {
+        "name": "Suki",
+        "stats": {
+            "comm": 53,
+            "strn": 63,
+            "sprt": 47,
+            "trad": 59
+        }
+    },
+    {
         "name": "King Bumi",
         "stats": {
             "comm": 64,
             "strn": 50,
             "sprt": 49,
             "trad": 50
+        }
+    },
+    {
+        "name": "Earth King Kuei",
+        "stats": {
+            "comm": 55,
+            "strn": 57,
+            "sprt": 47,
+            "trad": 59
         }
     },
     {
@@ -72,6 +99,15 @@ ideologies = [
             "strn": 69,
             "sprt": 32,
             "trad": 51
+        }
+    },
+    {
+        "name": "Azula",
+        "stats": {
+            "comm": 45,
+            "strn": 85,
+            "sprt": 26,
+            "trad": 61
         }
     },
     {
@@ -118,6 +154,15 @@ ideologies = [
             "strn": 36,
             "sprt": 71,
             "trad": 54
+        }
+    },
+    {
+        "name": "Jinora",
+        "stats": {
+            "comm": 47,
+            "strn": 31,
+            "sprt": 76,
+            "trad": 52
         }
     },
     {
